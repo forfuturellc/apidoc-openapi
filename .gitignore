@@ -1,0 +1,11 @@
+# installed modules
+node_modules
+
+# package tarballs
+forfuture-apidoc-openapi-*.tgz
+
+# ignore package-lock for library
+package-lock.json
+
+# misc.
+example/openapi.json

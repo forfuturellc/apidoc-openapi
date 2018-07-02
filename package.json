@@ -1,0 +1,20 @@
+{
+  "name": "@forfuture/apidoc-openapi",
+  "version": "0.0.0",
+  "description": "Generate OpenAPI definition file from apiDoc comments",
+  "contributors": [
+    "GochoMugo <mugo@forfuture.co.ke>"
+  ],
+  "bin": {
+    "apidoc-openapi": "bin/apidoc-openapi"
+  },
+  "scripts": {
+    "start:example": "bin/apidoc-openapi --project example/apidoc.json --src example --out example/openapi.json"
+  },
+  "dependencies": {
+    "apidoc-core": "^0.8.3",
+    "commander": "^2.16.0",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {}
+}
