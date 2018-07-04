@@ -1,6 +1,6 @@
 {
   "name": "@forfuture/apidoc-openapi",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate OpenAPI definition file from apiDoc comments",
   "license": "MIT",
   "contributors": [
