@@ -43,7 +43,7 @@ function main() {
   const paths = {
     apidoc: path.resolve(cwd, program.project),
     src: path.resolve(cwd, program.src),
-    out: path.resolve(cwd, program.out),
+    out: program.out && path.resolve(cwd, program.out),
   };
   const logger = new Logger();
   const { project, data } = getInput(paths, logger);
@@ -52,8 +52,14 @@ function main() {
   logger.debug('APIDOC.DATA:\n' + JSON.stringify(data, null, 2));
 
   const openapi = transformInput(project, data);
-  mkdirp.sync(path.dirname(paths.out));
-  fs.writeFileSync(paths.out, JSON.stringify(openapi, null, 2));
+  const output = JSON.stringify(openapi, null, 2);
+
+  if (paths.out) {
+    mkdirp.sync(path.dirname(paths.out));
+    fs.writeFileSync(paths.out, output);
+  } else {
+    console.log(output);
+  }
 }
 exports.main = main;
 
