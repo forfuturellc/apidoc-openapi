@@ -193,6 +193,7 @@ function getPaths(data) {
           // apiDoc error group defaults to 'Error 4xx'.
           const statusCode = response.group.replace(/(Success|Error)\ /, '').toUpperCase();
           responseObject = {
+            description: response.group,
             content: {
               [contentType]: {
                 schema: {
