@@ -89,7 +89,7 @@ $ apidoc-openapi --help
 To generate an OpenAPI definition file:
 
 ```bash
-$ apidoc-openapi --project ./apidoc.json --src src/ --out ./openapi.json
+npx apidoc-openapi --project "./apidoc.json" --config "" --src src/ --out ./openapi.json
 ```
 
 
