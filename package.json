@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "apidoc-core": "^0.8.3",
-    "commander": "^2.16.0",
-    "mkdirp": "^0.5.1"
-  },
-  "devDependencies": {}
+    "commander": "^14.0.1",
+    "mkdirp": "^3.0.1"
+  }
 }

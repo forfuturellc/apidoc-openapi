@@ -3,7 +3,7 @@ const path = require('path');
 
 const apidoc = require('apidoc-core');
 const mkdirp = require('mkdirp');
-const program = require('commander');
+const { program } = require('commander');
 
 const pkg = require('../package');
 
@@ -40,10 +40,11 @@ function main() {
   program.parse(process.argv);
 
   const cwd = process.cwd();
+  const opts = program.opts();
   const paths = {
-    apidoc: path.resolve(cwd, program.project),
-    src: path.resolve(cwd, program.src),
-    out: program.out && path.resolve(cwd, program.out),
+    apidoc: path.resolve(cwd, opts.project),
+    src: path.resolve(cwd, opts.src),
+    out: opts.out && path.resolve(cwd, opts.out),
   };
   const logger = new Logger();
   const { project, data } = getInput(paths, logger);
