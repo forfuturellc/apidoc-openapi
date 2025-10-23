@@ -12,8 +12,8 @@ const contentType = 'application/json';
 
 program
   .version(pkg.version)
-  .option('-p, --project <path>', 'path to apidoc config file')
-  .option('-s, --src <path>', 'path to source files')
+  .option('-p, --project <path>', 'path to apidoc config file', 'apidoc.json')
+  .option('-s, --src <path>', 'path to source files', '.')
   .option('-o, --out <path>', 'path to output file')
   .option('-v, --verbose', 'be verbose');
 
